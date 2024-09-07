@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "yourmodid",
+  "version": "1.0-SNAPSHOT",
+  "name": "org.example",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/minecraft/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "minecraft.example.minecraft.client.MinecraftClient"
+    ],
+    "main": [
+      "minecraft.example.minecraft.Minecraft"
+    ]
+  },
+  "mixins": [
+    "minecraft.mixins.json",
+    {
+      "config": "minecraft.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.6",
+    "fabric": "*",
+    "minecraft": "1.20.1"
+  }
+}
